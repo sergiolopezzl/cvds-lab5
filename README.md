@@ -9,7 +9,7 @@
 ## PARTE 1
 #### 3. Petición GET
 
-![GitPrincipal](../img/ecip.png)
+![GitPrincipal](img/ecip.png)
 
 ¿Qué codigo de error sale?, revise el significado del mismo en la lista de códigos de estado HTTP.
   
@@ -35,7 +35,7 @@ Códigos 500 (Errores del Servidor):
 * 500 Internal Server Error: Indica un error en el servidor que impide que la solicitud se complete correctamente.
 * 502 Bad Gateway: El servidor, mientras actuaba como puerta de enlace o proxy, recibió una respuesta no válida del servidor ascendente.
 * 503 Service Unavailable: El servidor no puede atender la solicitud en este momento debido a una sobrecarga o mantenimiento.
-* 
+  
 #### 4. Realice una nueva conexión con telnet:
 
 ```yml
@@ -46,11 +46,11 @@ Versión HTTP: 1.1
 
 Solicite (GET) el recurso /html. ¿Qué se obtiene como resultado?
 
-![GitPrincipal](../img/get.png)
+![GitPrincipal](img/get.png)
 
 #### 5. contar el número de caracteres
 
-![GitPrincipal](../img/contar.png)
+![GitPrincipal](img/contar.png)
 
 ### ¿Cuál esla diferencia entre los verbos GET y POST? ¿Qué otros tipos de peticiones existen?
 Los métodos **GET** y **POST** son dos de los métodos de petición más comunes en el protocolo HTTP, pero tienen algunas diferencias clave:
@@ -78,20 +78,20 @@ Cada uno de estos métodos implementa una semántica diferente, pero algunas car
 $ curl "www.httpbin.org"
 ```
 
-![GitPrincipal](../img/curl1.png)
+![GitPrincipal](img/curl1.png)
 
 Utilice ahora el parámetro -v y con el parámetro -i:
 
 ```sh
 $ curl -v www.httpbin.org
 ```
-![GitPrincipal](../img/curl2.png)
+![GitPrincipal](img/curl2.png)
 
 ```sh
 $ curl -i www.httpbin.org
 ```
 
-![GitPrincipal](../img/curl3.png)
+![GitPrincipal](img/curl3.png)
 
 Los parámetros `-v` e `-i` en el comando `curl` tienen diferentes usos:
 
