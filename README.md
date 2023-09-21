@@ -148,6 +148,8 @@ En un proyecto Spring MVC, se utilizan diversas anotaciones para configurar y ge
 Estas anotaciones son fundamentales para definir cómo se manejan las solicitudes HTTP y cómo se interactúa con el modelo y la vista en una aplicación Spring MVC.
 
 ### PARTE3
+![GitPrincipal](img/3.png)
+
 > * **¿Qué es RESTful?**
 
 RESTful (Representational State Transfer) es un estilo arquitectónico para el diseño de servicios web que se basa en principios y restricciones bien definidos. Fue propuesto por Roy Fielding en su tesis doctoral en 2000 y se ha convertido en un enfoque ampliamente utilizado para desarrollar servicios web que sean simples, escalables y eficientes.
