@@ -6,6 +6,98 @@
 ### Sergio Daniel Lopez Vargas
 
 ## RESPUESTAS
+## PARTE 1
+#### 3. Petición GET
+
+![GitPrincipal](../img/ecip.png)
+
+¿Qué codigo de error sale?, revise el significado del mismo en la lista de códigos de estado HTTP.
+  
+El código de error "301 Moved Permanently" es una respuesta HTTP que indica que la ubicación de una página web o recurso ha cambiado de manera permanente. Esto significa que el servidor web ha redirigido la solicitud a una nueva URL, y los navegadores y aplicaciones deben actualizar sus marcadores o enlaces a esa nueva ubicación. A continuación, te proporciono una descripción de algunos de los códigos de respuesta HTTP más comunes:
+
+¿Qué otros códigos de error existen?, ¿En qué caso se manejarán?
+
+Códigos 200 (Éxito):
+* 200 OK: Indica que la solicitud se ha completado correctamente, y el servidor está devolviendo los datos solicitados.
+  
+Códigos 300 (Redirecciones):
+* 301 Moved Permanently: El recurso solicitado se ha movido permanentemente a una nueva ubicación. Los navegadores deben actualizar sus marcadores y enlaces.
+* 302 Found (o 302 Found Temporary): Indica una redirección temporal. Los navegadores pueden mantener el enlace original en su caché.
+* 304 Not Modified: Indica que la página no ha cambiado desde la última vez que se accedió a ella, y se puede usar la versión en caché.
+
+Códigos 400 (Errores del Cliente):
+* 400 Bad Request: La solicitud enviada al servidor es incorrecta o no puede ser procesada.
+* 401 Unauthorized: Se requiere autenticación para acceder al recurso.
+* 403 Forbidden: El servidor comprende la solicitud, pero no permite el acceso al recurso.
+* 404 Not Found: El recurso solicitado no se encuentra en el servidor.
+
+Códigos 500 (Errores del Servidor):
+* 500 Internal Server Error: Indica un error en el servidor que impide que la solicitud se complete correctamente.
+* 502 Bad Gateway: El servidor, mientras actuaba como puerta de enlace o proxy, recibió una respuesta no válida del servidor ascendente.
+* 503 Service Unavailable: El servidor no puede atender la solicitud en este momento debido a una sobrecarga o mantenimiento.
+* 
+#### 4. Realice una nueva conexión con telnet:
+
+```yml
+Host: www.httpbin.org
+Puerto: 80
+Versión HTTP: 1.1
+```
+
+Solicite (GET) el recurso /html. ¿Qué se obtiene como resultado?
+
+![GitPrincipal](../img/get.png)
+
+#### 5. contar el número de caracteres
+
+![GitPrincipal](../img/contar.png)
+
+### ¿Cuál esla diferencia entre los verbos GET y POST? ¿Qué otros tipos de peticiones existen?
+Los métodos **GET** y **POST** son dos de los métodos de petición más comunes en el protocolo HTTP, pero tienen algunas diferencias clave:
+
+- **GET**: Este método solicita una representación de un recurso específico. Los datos que se envían al servidor se escriben en la misma dirección URL. Es seguro y se puede guardar junto a la dirección URL como marcador. Sin embargo, los parámetros URL que se envían quedan visibles en la barra de direcciones del navegador y son accesibles sin clave en el historial de navegación, en el caché y en el log de los servidores. Además, su capacidad es limitada: dependiendo del servidor y del navegador, no es posible introducir más de 2000 caracteres.
+
+- **POST**: Este método se utiliza para enviar una entidad a un recurso en específico, causando a menudo un cambio en el estado o efectos secundarios en el servidor. Los parámetros se introducen en la solicitud HTTP para el servidor, por lo que no quedan visibles para el usuario. Además, la capacidad del método POST es ilimitada.
+
+Además de GET y POST, existen otros métodos de petición HTTP:
+
+- **PUT**: Este método reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la petición.
+- **DELETE**: Este método borra un recurso en específico.
+- **HEAD**: Este método pide una respuesta idéntica a la de una petición GET, pero sin el cuerpo de la respuesta.
+- **CONNECT**: Este método establece un túnel hacia el servidor identificado por el recurso.
+- **OPTIONS**: Este método es utilizado para describir las opciones de comunicación para el recurso de destino.
+- **TRACE**: Este método realiza una prueba de bucle de retorno de mensaje a lo largo de la ruta al recurso de destino.
+- **PATCH**: Este método es utilizado para aplicar modificaciones parciales a un recurso.
+
+Cada uno de estos métodos implementa una semántica diferente, pero algunas características similares son compartidas por un grupo de ellos. Por ejemplo, un método de petición puede ser seguro, idempotente o cacheable.
+[getVSpost](https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/get-vs-post/)
+
+#### 6. Curl: 
+
+```sh
+$ curl "www.httpbin.org"
+```
+
+![GitPrincipal](../img/curl1.png)
+
+Utilice ahora el parámetro -v y con el parámetro -i:
+
+```sh
+$ curl -v www.httpbin.org
+```
+![GitPrincipal](../img/curl2.png)
+
+```sh
+$ curl -i www.httpbin.org
+```
+
+![GitPrincipal](../img/curl3.png)
+
+Los parámetros `-v` e `-i` en el comando `curl` tienen diferentes usos:
+
+- **-v**: Este parámetro se utiliza para habilitar el modo detallado o "verbose". Cuando se utiliza este parámetro, `curl` proporciona información adicional y detallada sobre la transferencia de datos, incluyendo los detalles de la solicitud y la respuesta. Es útil para depurar y entender lo que está sucediendo bajo el capó¹.
+
+- **-i**: Este parámetro se utiliza para incluir la cabecera HTTP en la salida. `curl` mostrará los encabezados de respuesta HTTP junto con los datos del cuerpo¹.
 
 ### PARTE 2
 > * **¿Por qué MVC obtiene ese nombre?**
