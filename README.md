@@ -101,6 +101,7 @@ Los parámetros `-v` e `-i` en el comando `curl` tienen diferentes usos:
 
 ### PARTE 2
 > * **¿Por qué MVC obtiene ese nombre?**
+
 MVC se llama así debido a su arquitectura de tres componentes principales:
 
 **Modelo (Model):** Representa los datos y la lógica empresarial de la aplicación.
@@ -109,6 +110,7 @@ MVC se llama así debido a su arquitectura de tres componentes principales:
 
 **Controlador (Controller):** Controla las solicitudes del usuario, interactúa con el modelo y selecciona la vista adecuada para mostrar los resultados.
 > * **¿Cuáles son las ventajas de usar MVC?**
+
 Algunas de las ventajas de utilizar la arquitectura MVC en aplicaciones web incluyen:
 
 **Separación de preocupaciones:** MVC divide la aplicación en componentes separados, lo que facilita la gestión y el mantenimiento del código.
@@ -120,6 +122,7 @@ Algunas de las ventajas de utilizar la arquitectura MVC en aplicaciones web incl
 **Pruebas unitarias:** Permite realizar pruebas unitarias más eficaces y facilita la automatización de pruebas.
 Colaboración entre equipos: Permite que equipos diferentes trabajen en paralelo en diferentes partes de la aplicación.
 > * **¿Qué diferencia tiene la estructura de directorios de este proyecto comparado con las de proyectos pasados (con solo maven y java EE)?**
+
 La estructura de directorios en un proyecto Spring MVC es diferente de la de proyectos Maven y Java EE debido a la naturaleza específica de Spring MVC. En un proyecto Spring MVC, se suelen encontrar carpetas y paquetes como:
 
 **src/main/java:** Contiene las clases Java, incluyendo controladores y modelos.
@@ -131,6 +134,7 @@ La estructura de directorios en un proyecto Spring MVC es diferente de la de pro
 **WEB-INF:** Contiene archivos de configuración de Spring y configuraciones específicas de Servlet.
     Esta estructura está diseñada para facilitar la gestión de componentes MVC y la configuración de Spring.
 > * **¿Qué anotaciones usaste y cuál es la diferencia entre ellas?**
+
 En un proyecto Spring MVC, se utilizan diversas anotaciones para configurar y gestionar controladores, vistas y otras partes de la aplicación. Algunas anotaciones comunes incluyen:
 
 **@Controller:** Anota una clase como controlador.
@@ -154,5 +158,15 @@ Estas anotaciones son fundamentales para definir cómo se manejan las solicitude
 
 RESTful (Representational State Transfer) es un estilo arquitectónico para el diseño de servicios web que se basa en principios y restricciones bien definidos. Fue propuesto por Roy Fielding en su tesis doctoral en 2000 y se ha convertido en un enfoque ampliamente utilizado para desarrollar servicios web que sean simples, escalables y eficientes.
 
+### PARTE4
 
+> * **¿Qué pasa si abro el sitio de juegos en dos navegadores difententes?**
+
+Se abre normalmente en los dos navegadores:
+![GitPrincipal](img/nav1.png)
+![GitPrincipal](img/nav2.png)
+
+> * **Si quisiera qué a cada jugador le aparecieran independientemente sus respectivos saldos. ¿Qué habría que hacer?**
+
+Se puede utilizar una base de datos para almacenar la información del jugador, incluido su saldo. Cada jugador tendría su propio registro en la base de datos, y el saldo se actualizaría en función de sus acciones en el juego.
 
