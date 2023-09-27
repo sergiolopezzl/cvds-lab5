@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <title>Adivina el Número</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="display-4">Adivina el Número</h1>
+
+    <div class="alert alert-primary" th:text="${resultado}"></div>
+
+    <form action="/guess" method="post">
+        <div class="form-group">
+            <label for="numero">Introduce un número del 1 al 10:</label>
+            <input type="number" class="form-control" id="numero" name="numero" min="1" max="10">
+        </div>
+        <button type="submit" class="btn btn-primary">Adivinar</button>
+    </form>
+
+    <form action="/reset" method="post">
+        <button type="submit" class="btn btn-danger mt-2">Reiniciar</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+target
+.classpath
+.idea
+.settings
+.project
+.vscode/
+target/
+.gradle
+.idea
+.mvn
+gradle/
+out/
+.vscode
